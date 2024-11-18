@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <a href="home.html"><li>Home</li></a>
+      <a href="expirience.html"><li>Experience</li></a>
+      <a href="food.html"><li>Food</li></a>
+      <a href="movie.html"><li>Movie</li></a>
+      <a href="contact.html"><li>Contact Me</li></a>
+    </ul>
+
+    <section>
+      <h1>Please enter your personal details</h1>
+      <form action="" enctype="multipart/form-data">
+        <div>
+          <label for="fullname-id">Enter your fullname:</label>
+          <input
+            type="text"
+            name="user-fullname"
+            id="fullname-id"
+            placeholder="John Doe"
+            required
+            pattern="[\w\s\.]{5,40}"
+            title="Name must be between 5 to 40 characters in length and contain letters and dot."
+          />
+        </div>
+
+        <div>
+          <label for="email-id">Email:</label>
+          <input
+            type="email"
+            name="user-email"
+            id="email-id"
+            placeholder="urriquia@gmail.com"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="username-id">Enter your username:</label>
+          <input
+            type="text"
+            name="user-username"
+            id="username-id"
+            placeholder="Enter your username"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="password-id">Enter your password:</label>
+          <input
+            type="password"
+            name="user-password"
+            id="password-id"
+            placeholder="Enter your password"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="password-id">Confirm your password:</label>
+          <input
+            type="password"
+            name="cpassword-password"
+            id="cpassword-id"
+            placeholder="confirm your password"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="fullname-id">Enter your address:</label>
+          <input
+            type="text"
+            name="user-address"
+            id="address-id"
+            placeholder="Enter your address"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="age-id">Enter your Age:</label>
+          <input
+            type="number"
+            name="user-age"
+            id="age-id"
+            placeholder="18"
+            min="18"
+            max="100"
+          />
+        </div>
+
+        <div>
+          <label for="number-id">Enter your mobile number Mobile No:</label>
+          <input
+            type="tel"
+            name="user-number"
+            id="number-id"
+            pattern="09[0-9]{2}-[0-9]{3}-[0-9]{4}"
+            placeholder="09xx-xxx-xxxx"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="birthdate-id">Enter your Birthdate:</label>
+          <input type="date" name="user-birthdate" id="birthdate-id" required />
+        </div>
+
+        <div>
+          <label for="gender-id">Gender:</label>
+          <select name="user-gender" id="gender-id" required>
+            <option value="" selected disabled hidden>
+              -- Select your Gender --
+            </option>
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+            <option value="O">Others</option>
+          </select>
+        </div>
+
+        <div>
+          <!-- Accept Pictures -->
+          <label for="file-id">Upload your Photo:</label>
+          <input
+            type="file"
+            name="user-file"
+            id="file-id"
+            multiple
+            accept="image/png, image/jpg, image/jpeg, image/gif, image/webp"
+          />
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </body>
+</html>
