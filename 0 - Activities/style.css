@@ -1,0 +1,56 @@
+ul {
+  display: flex; /* Align items horizontally using flexbox */
+  justify-content: center; /* Centers the list items */
+  list-style-type: none; /* Removes default bullet points */
+  padding: 0;
+  margin: 0;
+  background-color: #333; /* Dark background for contrast */
+  border-radius: 8px; /* Rounded corners for the whole list */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds subtle shadow */
+}
+
+h1 {
+  padding: 0px;
+}
+
+ol {
+  list-style: none;
+}
+
+.color {
+  font-family: "Arial", sans-serif; /* Choose a clean, modern font */
+  font-size: 20px; /* Large size for emphasis */
+  font-weight: bold; /* Make the title bold */
+  color: #333; /* Dark grey color for contrast */
+  text-align: center; /* Center the title */
+  margin: 20px 0; /* Space above and below the title */
+}
+
+/* Style for the LI items */
+ul li {
+  margin: 0 50px; /* Adds space between items */
+  padding: 10px 20px; /* Adds padding inside the list items */
+  color: white; /* Text color */
+  font-size: 18px; /* Font size */
+  font-family: Arial, sans-serif; /* Choose a modern font */
+  text-transform: uppercase; /* Uppercase text for emphasis */
+  cursor: pointer; /* Changes cursor to indicate clickable items */
+  border-radius: 5px; /* Rounded corners on list items */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+body {
+  display: flex; /* Enable Flexbox */
+  flex-direction: column; /* Stacks children vertically */
+  justify-content: center; /* Centers the content vertically */
+  align-items: center; /* Centers the content horizontally */
+
+  margin-top: 90px; /* Remove default margin */
+  background-color: #e0c7c7; /* Light background */
+}
+
+/* Image Styling */
+img {
+  width: 200px; /* Example width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 50%; /* Optional: Circular image */
+}
