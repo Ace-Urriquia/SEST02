@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Animation</title>
+    <style>
+      .container {
+        width: 400px;
+        height: 600px;
+        border: 8px solid black;
+        position: absolute;
+        /* top, bottom, left, right */
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        overflow: hidden; /* Hide shadow outside the container */
+      }
+
+      .ball {
+        width: 100px;
+        height: 100px;
+        background-color: #c52233;
+        border: 8px solid #580c1f;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: bounce 1000ms ease-in 600ms infinite normal none;
+      }
+
+      .shadow {
+        width: 100px;
+        height: 20px;
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        opacity: 0; 
+        animation: shadow-animate 1000ms ease-in 600ms infinite normal none;
+      }
+
+      @keyframes bounce {
+        0% {
+          transform: translate(-50%, 0);
+        }
+        50% {
+          transform: translateX(-50%) translateY(490px) scale(1.2, 0.8);
+        }
+        100% {
+          transform: translate(-50%, 0);
+        }
+      }
+
+      @keyframes shadow-animate {
+        0% {
+          opacity: 0; /* No shadow at the top */
+          transform: translateX(-50%) scaleX(1) scaleY(1);
+        }
+        50% {
+          opacity: 1; /* Shadow visible when ball hits the ground */
+          transform: translateX(-50%) scaleX(1.5) scaleY(0.4); /* Stretch the shadow */
+        }
+        100% {
+          opacity: 0; /* Shadow disappears as the ball rises */
+          transform: translateX(-50%) scaleX(1) scaleY(1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="ball"></div>
+      <div class="shadow"></div>
+    </div>
+  </body>
+</html>
