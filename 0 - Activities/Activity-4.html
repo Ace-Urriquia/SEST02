@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity # 4</title>
+</head>
+<body>
+    <script>
+    class Person {
+        constructor(name,age,occupation,hobbies,address){
+            this.name = name;
+            this.age = age;
+            this.occupation = occupation;
+            this.hobbies = hobbies;
+            this.address = address;
+        }
+
+        introduce(){
+            console.log(`
+            ${this.name}
+            ${this.age}
+            ${this.occupation}
+            ${this.hobbies}   
+            `)
+        }
+        getOlder(){
+            this.age++;
+            console.log(`Your age is incremented and it is now ${this.age}`);
+        }
+        changeOccupation(newOccupation){
+            this.occupation = newOccupation;
+            console.log(`Updated Occupation is ${this.occupation}`);
+        }
+        addHobby(){
+            this.hobbies.push("Running");
+            console.log(`Your new list of hoobies are ${this.hobbies}`);
+        }
+
+        move(newAddress){
+            this.address = newAddress;
+
+            console.log(`Your updated street is ${JSON.stringify(this.address)}`);
+        }
+       
+
+
+
+    }
+
+    const person1 = new Person ("Ace","26","One Codecamp Student",['Coding','Gaming'],{street:"Bagong Sikat", city:"San Jose",state:"MA",zipcode:"5100"});
+    const person2 = new Person( "Ariston", 25, "Senior Programmer", ["Painting", "Traveling"], { street: "456 Oak Ave", city: "Los Angeles", state: "CA", zipCode: "90001" });
+    const person3 = new Person("Joshua", 40, "Lead Programmer", ["Cooking", "Hiking"], { street: "789 Pine Blvd", city: "Chicago", state: "IL", zipCode: "60601" }
+);
+
+person1.introduce();
+person1.getOlder();
+person1.changeOccupation("Data Scientist");
+person1.addHobby("Photography");
+person1.move({ street: "321 Elm St", city: "San Francisco", state: "CA", zipCode: "94105" });
+
+
+person2.introduce();
+person2.getOlder();
+person2.changeOccupation("Graphic Designer");
+person2.addHobby("Music");
+person2.move({ street: "654 Maple Dr", city: "Austin", state: "TX", zipCode: "73301" });
+
+
+person3.introduce();
+person3.getOlder();
+person3.changeOccupation("Professor");
+person3.addHobby("Reading");
+person3.move({ street: "987 Birch Rd", city: "Seattle", state: "WA", zipCode: "98101" });
+
+    
+
+
+</script>
+
+</body>
+</html>

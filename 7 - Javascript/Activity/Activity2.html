@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activity 2</title>
+  </head>
+  <body>
+    <script>
+      const library = [
+        {
+          title: "Rich Dad Poor Dad",
+          author: "Robert Kiyosaki",
+          isAvailable: true,
+        },
+        {
+          title: "Atomic Habits",
+          author: "James Clear",
+          isAvailable: true,
+        },
+        {
+          title: "48 Laws of Power",
+          author: "Robert Greene",
+          isAvailable: true,
+        },
+      ];
+
+      function AvailableBooks() {
+        library.forEach(function (lib) {
+          if (lib.isAvailable == true) {
+            console.log(lib);
+          }
+        });
+      }
+
+      AvailableBooks();
+
+      function borrowBook(title) {
+        const book = library.find((lib) => lib.title === title);
+
+        if (book && book.isAvailable) {
+          console.log("You borrowed this book successfully");
+          book.isAvailable = false;
+        } else  
+          console.log("Sorry this book is already borrowed.");
+        
+      }
+
+      borrowBook("Atomic Habits");
+      borrowBook("Atomic Habits");
+      AvailableBooks();
+    </script>
+  </body>
+</html>
