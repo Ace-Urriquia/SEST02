@@ -17,8 +17,8 @@ elementWithClass[1].textContent = "Div 2";
 
 let listItems = document.getElementsByTagName("li");
 console.log("List Items:", listItems);
-listItems[0].style.color = "tomato";
-listItems[0].style.backgroundColor = "aqua";
+listItems[5].style.color = "tomato";
+listItems[5].style.backgroundColor = "green";
 
 // .querySelector()
 // Return: First Element or Null
@@ -47,9 +47,9 @@ parent.lastElementChild.textContent = "Last Element is Modified";
 // Siblings: .previousElementSibling and .nextElementSibling
 const child3 = document.querySelector("#child3");
 const child3PreviousSibling = child3.previousElementSibling;
-child3PreviousSibling.style.backgroundColor = "skyblue";
+child3PreviousSibling.style.backgroundColor = "brown";
 const child3NextSibling = child3.nextElementSibling;
-child3NextSibling.style.backgroundColor = "orange";
+child3NextSibling.style.backgroundColor = "yellow";
 
 // Creating and Appending New Elements
 const parentElementDiv = document.querySelector("#parent-element");
@@ -58,6 +58,10 @@ console.log(parentElementDiv);
 let childElementDiv = document.createElement("div");
 childElementDiv.textContent = "child Element";
 parentElementDiv.appendChild(childElementDiv);
+
+let childElementH3 = document.createElement("h3");
+childElementH3.textContent = "H3 content";
+parentElementDiv.appendChild(childElementH3);
 
 const elementToBeRemoved = document.querySelector("#element-to-be-removed");
 elementToBeRemoved.remove();
