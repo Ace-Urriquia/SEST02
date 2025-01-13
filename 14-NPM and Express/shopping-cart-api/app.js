@@ -10,10 +10,10 @@ app.use(express.json());
 
 function generateUniqueIdCart() {
   if (cartItems.length === 0) {
-    return 1; // If there are no items, start with id 1
+    return 1; 
   }
-  const lastCartObject = cartItems[cartItems.length - 1]; // Correct way to get the last item
-  return lastCartObject.id + 1; // Increment the last id by 1 for the new item
+  const lastCartObject = cartItems[cartItems.length - 1]; 
+  return lastCartObject.id + 1; 
 }
 
 app.get("/cart", (request, response) => {
