@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Binary Search</title>
+  </head>
+  <body>
+    <h1>JS Binary Search</h1>
+    <script>
+      function binarySearch(sortedArray, targetValue) {
+
+        // == 1st Iteration ==
+        // [10, 20, 30, 40, 50, 60]
+        //   0,  1,  2,  3,  4,  5
+        // leftIndex = 0
+        // rightIndex = 5
+        // middleIndex =
+        // while(5 >= 0) - true
+        // == 2nd Iteration ==
+        // leftIndex = 3
+        // rightIndex = 5
+        // middleIndex = 2;
+        // while(5 >= 3) - true
+
+        // Code will go here.
+        let leftIndex = 0;
+        let rightIndex = sortedArray.length - 1;
+        let middleIndex;
+        //   console.log(numbers.length - 1);
+        while (rightIndex >= leftIndex) {
+          middleIndex = leftIndex + Math.floor((rightIndex - leftIndex) / 2);
+          // If the target value is at the middle index, return the middle index.
+          if (sortedArray[middleIndex] === targetValue) {
+            return middleIndex;
+          }
+          // If the target value is smaller than the middle value,
+          // search the left half of the array
+          if (sortedArray[middleIndex] > targetValue) {
+            rightIndex = middleIndex - 1;
+          } else {
+            // otherwise, search the right half.
+            leftIndex = middleIndex + 1;
+          }
+        }
+        // If the target is not found
+        return -1;
+      }
+      const numbers = [10, 20, 30, 40, 50, 60];
+      const target = 40;
+
+      const result = binarySearch(numbers,target);
+      console.log("Result:",result);
+    </script>
+  </body>
+</html>
