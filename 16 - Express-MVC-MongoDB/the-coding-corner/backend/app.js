@@ -8,6 +8,21 @@ const app = express();
 // Middleware
 app.use(express.json());
 
+const corsOptions = {
+  origin: ["http://localhost:5173"],
+  methods: ["GET","POST","PATCH","DELETE","PUT"],
+  allowedHeaders: ["Content-Type"],
+  exposedHeaders: ["Content-Type"],
+};
+
+app.use(cors(corsOptions));
+
+//routes
+//http://localhost:4000/post
+app.use("/api/posts",require("./src/routes/post"));
+
+app.use("/api/users",require("./src/routes/user"));
+
 // Connect to the MongoDB Cluster
 mongoose
   .connect(process.env.MONGODB_URI)
@@ -20,4 +35,6 @@ mongoose
   })
   .catch((error) => {
     console.error(`Error connecting to MongoDB: ${error.message}`);
+    console.error(error.stack);  // Print full stack trace for more insights
   });
+  
